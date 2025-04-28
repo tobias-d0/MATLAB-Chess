@@ -1,6 +1,6 @@
 classdef pawn < piece
     %PAWN Class for the pawn piece
-    %   Inherits from the piece class. Adds addtional functionality as
+    %   Inherits from the piece class. Adds additional functionality as
     %   pawns capture in a specific way.
 
     properties
@@ -14,6 +14,9 @@ classdef pawn < piece
             %   Detailed explanation goes here
             p.MoveIndices = [0,1]; % forward
             p.Colour = colour;
+            p.CurrentPosition = currentPosition;
+            p.Symbol = ""; % No symbol for a pawn
+            p.ContinuousMovement = false;
         end
     end
 end

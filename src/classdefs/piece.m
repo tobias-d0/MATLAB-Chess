@@ -6,10 +6,10 @@ classdef piece
 
     properties
         PossibleMoves
-        MoveIndices
+        MoveIndices (2,:) {mustBeNumeric, mustBeInteger}
         Colour (1,1) string {mustBeMember(Colour, ["White", "Black"])}
         CurrentPosition
-        ContinuousMovement % Bishops, Rooks, Queens
+        ContinuousMovement logical % Bishops, Rooks, Queens
         Symbol % For chess notation (King = K, Knight = N, Queen = Q, etc)
 
         X =[
