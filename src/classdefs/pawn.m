@@ -4,20 +4,16 @@ classdef pawn < piece
     %   pawns capture in a specific way.
 
     properties
-        CaptureIndices (2,2) = [1,1 ; -1,1]
+        CaptureIndices (2,2) = [1,1 ; -1,1] % Forward-right, forward-left
+        FirstMove = true
     end
 
     methods
-        function p = pawn(inputArg1,inputArg2)
+        function p = pawn(colour)
             %PAWN Construct an instance of this class
             %   Detailed explanation goes here
-            obj.Property1 = inputArg1 + inputArg2;
-        end
-
-        function outputArg = method1(obj,inputArg)
-            %METHOD1 Summary of this method goes here
-            %   Detailed explanation goes here
-            outputArg = obj.CaptureIndices + inputArg;
+            p.MoveIndices = [0,1]; % forward
+            p.Colour = colour;
         end
     end
 end
