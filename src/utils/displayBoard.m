@@ -9,6 +9,6 @@ This function will flip the view if player == "black"
 
 %}
 
-function [] = displayBoard(boardData, player)
+function [] = displayBoard(board, player)
     
 end
