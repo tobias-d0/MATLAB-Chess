@@ -9,7 +9,7 @@ classdef pawn < piece
     end
 
     methods
-        function p = pawn(colour)
+        function p = pawn(colour, currentPosition)
             %PAWN Construct an instance of this class
             %   Detailed explanation goes here
             p.MoveIndices = [0,1]; % forward

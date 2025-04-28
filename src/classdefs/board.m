@@ -1,16 +1,6 @@
 classdef board
     %BOARD Contains logic for the board
-    %{
-        Let:
-            empty space = 0
-            pawn        = 1
-            knight      = 2
-            bishop      = 3
-            rook        = 4
-            queen       = 5
-            king        = 6
-    %}
-
+    
     properties
         BoardMatrix (8,8)
         LegalMoves (1,:) % unsure if using Chess notation (string) or something else
@@ -22,8 +12,38 @@ classdef board
         function b = board()
             %BOARD Construct an instance of this class
             %   Detailed explanation goes here
-            
-            
+
+            % Populate the 8x8 board matrix:
+            for row = 1:8
+                if row > 2 && row < 7
+                    % These rows should not be populated
+                    continue;
+                end
+                if row == 1 || row == 2
+                    colour = "Black";
+                else
+                    colour = "White";
+                end
+                currentPosition = [row, col];
+                for col = 1:8
+                    if row == 1 || row == 8
+                        switch col
+                            case [1,8]
+                                b.BoardMatrix(row, col) = rook(colour, currentPosition);
+                            case [2,7]
+                                b.BoardMatrix(row, col) = knight(colour, currentPosition);
+                            case [3,6]
+                                b.BoardMatrix(row, col) = bishop(colour, currentPosition);
+                            case 4
+                                b.BoardMatrix(row, col) = queen(colour, currentPosition);
+                            case 5
+                                b.BoardMatrix(row, col) = king(colour, currentPosition);
+                        end
+                    else
+                        b.BoardMatrix(row, col) = pawn(colour, currentPosition);
+                    end
+                end
+            end
         end
 
         function gameOver = isGameOver(board, playerToMove)
