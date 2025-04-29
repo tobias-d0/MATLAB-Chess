@@ -18,6 +18,7 @@
 
 1. **Game Class**
     - Contains the core logic for the game
+    - isGameOver() method
 2. **Board Class**
     - Contains the logic for the board
     - displayBoard() method
