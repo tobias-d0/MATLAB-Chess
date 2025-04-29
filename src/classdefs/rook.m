@@ -20,7 +20,12 @@ classdef rook < piece
             r.CurrentPosition = currentPosition;
             r.Symbol = "R";
             % Rooks move horizontally and vertically multiple squares at a time
-            r.ContinuousMovement = true; 
+            r.ContinuousMovement = true;
+            if colour == "White"
+                r.FilePath = "..\images\white-rook.png";
+            else
+                r.FilePath = "..\images\black-rook.png";
+            end
         end
     end
 end

@@ -20,7 +20,12 @@ classdef bishop < piece
             b.CurrentPosition = currentPosition;
             b.Symbol = "B";
             % Bishops move diagonally multiple squares at a time
-            b.ContinuousMovement = true; 
+            b.ContinuousMovement = true;
+            if colour == "White"
+                b.FilePath = "..\images\white-bishop.png";
+            else
+                b.FilePath = "..\images\black-bishop.png";
+            end
         end
     end
 end

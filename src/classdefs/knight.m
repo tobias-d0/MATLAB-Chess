@@ -24,6 +24,11 @@ classdef knight < piece
             n.CurrentPosition = currentPosition;
             n.Symbol = "N";
             n.ContinuousMovement = false;
+            if colour == "White"
+                n.FilePath = "..\images\white-knight.png";
+            else
+                n.FilePath = "..\images\black-knight.png";
+            end
         end
     end
 end

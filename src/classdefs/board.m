@@ -71,7 +71,7 @@ classdef board
         end
 
         function disp(board)
-            %METHOD1 Display the board graphically
+            %DISP Display the board graphically
             %   Uses data from the board matrix and stitches an image using
             %   the chess images pieces in the images folder to create a
             %   graphical representation of the board

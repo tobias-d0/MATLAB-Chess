@@ -26,6 +26,11 @@ classdef queen < piece
             % Queens move horizontally, vertically and diagonally
             % multiple squares at a time
             q.ContinuousMovement = true; 
+            if colour == "White"
+                q.FilePath = "..\images\white-queen.png";
+            else
+                q.FilePath = "..\images\black-queen.png";
+            end
         end
     end
 end

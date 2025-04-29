@@ -17,6 +17,11 @@ classdef pawn < piece
             p.CurrentPosition = currentPosition;
             p.Symbol = ""; % No symbol for a pawn
             p.ContinuousMovement = false;
+            if colour == "White"
+                p.FilePath = "..\images\white-pawn.png";
+            else
+                p.FilePath = "..\images\black-pawn.png";
+            end
         end
     end
 end

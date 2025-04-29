@@ -25,7 +25,12 @@ classdef king < piece
             k.Symbol = "K";
             % Kings move horizontally, vertically and diagonally
             % one square at a time
-            k.ContinuousMovement = false; 
+            k.ContinuousMovement = false;
+            if colour == "White"
+                k.FilePath = "..\images\white-king.png";
+            else
+                k.FilePath = "..\images\black-king.png";
+            end
         end
     end
 end

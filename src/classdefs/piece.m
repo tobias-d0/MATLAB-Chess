@@ -11,27 +11,8 @@ classdef piece
         CurrentPosition
         ContinuousMovement logical % Bishops, Rooks, Queens
         Symbol % For chess notation (King = K, Knight = N, Queen = Q, etc)
+        FilePath
 
-        X =[
-    1, 0; % right
-	0, 1; % up
-	-1, 0; % left
-	0, -1; % down
-	1, 1; % up-right
-	1, -1; % down-right
-	-1, -1; % down-left
-	-1, 1; % up-left
-
-	% Knight moves
-	2, 1;
-	-2, 1;
-	-2, -1;
-	2, -1;
-	1, 2;
-	-1, 2;
-	-1, -2;
-	1, -2;
-]
     end
 
     methods
