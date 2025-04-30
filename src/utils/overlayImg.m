@@ -13,8 +13,8 @@ end
 overlayedImg = backCData;
 [heightF, widthF, channels] = size(frontCData);
 [heightB, widthB, ~] = size(backCData);
-xOffset = position(2); % ⚠️ column offset (horizontal)
-yOffset = position(1); % ⚠️ row offset (vertical)
+xOffset = position(2); % column offset (horizontal)
+yOffset = position(1); % row offset (vertical)
 
 if channels ~= 3
     % https://au.mathworks.com/help/matlab/ref/error.html
@@ -25,6 +25,8 @@ for i = 1:heightF
     for j = 1:widthF
         targetY = yOffset + i;
         targetX = xOffset + j;
+        % Ensure that the target pixel is within the bounds of
+        % the back image and is not transparent
         if frontAlphaData(i,j) ~= 0 && ...
                 targetY <= heightB && targetX <= widthB && ...
                 targetY > 0 && targetX > 0

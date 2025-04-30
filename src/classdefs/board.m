@@ -6,17 +6,19 @@ classdef board
         SquareSize = 128 % pixels
         LightSquareColour = [255, 253, 223]
         DarkSquareColour = [240, 140, 20]
+        % https://au.mathworks.com/help/matlab/ref/struct.html
         PieceMoves struct = struct([]); % Holds current position of piece and legal moves
         WhiteCastleQueenSide logical = true
         WhiteCastleKingSide logical = true
         BlackCastleQueenSide logical = true
-        BlackCastleKingSide logical = true
+        BlackCastleKingSide logical = true % Didn't end up implementing castling so this is not used
     end
 
     methods
         function b = board()
             %BOARD Construct an instance of this class
-            %   Detailed explanation goes here
+            %   Constructor for the board class. This creates the board and
+            %   populates the board with pieces. The board is an 8x8 matrix
 
             % Populate the 8x8 board matrix:
             b.BoardMatrix = cell(8,8);

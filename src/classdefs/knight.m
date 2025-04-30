@@ -9,7 +9,6 @@ classdef knight < piece
     methods
         function n = knight(colour, currentPosition)
             %KNIGHT Construct an instance of this class
-            %   Detailed explanation goes here
             n.DirectionVectors = [
                 2, 1;
 	            -2, 1;
