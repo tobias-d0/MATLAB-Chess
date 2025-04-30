@@ -10,7 +10,7 @@ classdef bishop < piece
             %BISHOP Construct an instance of this class
             %   Takes the colour and current position of the bishop
             %   and instantiates how it can move.
-            b.MoveIndices = [
+            b.DirectionVectors = [
                 1, 1; % up-right
 	            1, -1; % down-right
 	            -1, -1; % down-left
@@ -22,9 +22,9 @@ classdef bishop < piece
             % Bishops move diagonally multiple squares at a time
             b.ContinuousMovement = true;
             if colour == "White"
-                b.FilePath = "..\images\white-bishop.png";
+                b.FilePath = "..\src\images\white-bishop.png";
             else
-                b.FilePath = "..\images\black-bishop.png";
+                b.FilePath = "..\src\images\black-bishop.png";
             end
         end
     end

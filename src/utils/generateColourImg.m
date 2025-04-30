@@ -3,7 +3,7 @@ function colourImg = generateColourImg(width,height,colour)
 %filled with a solid colour
 % Colour must be an array containing RGB values (8 bit unsigned integers)
     % Preallocate
-    colourImg = zeros(width, height, 3);
+    colourImg = zeros(width, height, 3, 'uint8');
     for i = 1:width
         for j = 1:height
             for k = 1:3

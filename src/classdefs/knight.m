@@ -10,7 +10,7 @@ classdef knight < piece
         function n = knight(colour, currentPosition)
             %KNIGHT Construct an instance of this class
             %   Detailed explanation goes here
-            n.MoveIndices = [
+            n.DirectionVectors = [
                 2, 1;
 	            -2, 1;
 	            -2, -1;
@@ -25,9 +25,9 @@ classdef knight < piece
             n.Symbol = "N";
             n.ContinuousMovement = false;
             if colour == "White"
-                n.FilePath = "..\images\white-knight.png";
+                n.FilePath = "..\src\images\white-knight.png";
             else
-                n.FilePath = "..\images\black-knight.png";
+                n.FilePath = "..\src\images\black-knight.png";
             end
         end
     end
